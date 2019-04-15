@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[latex testing]]></title>
+    <url>%2F2019%2F04%2F15%2Flatex-testing%2F</url>
+    <content type="text"><![CDATA[f[i]=f[i-1]+f[i-2]]]></content>
+      <tags>
+        <tag>testing</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F04%2F14%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[It’s the first thing that you should learn in C++ or any other languege. First, you need a #include. 1#include&lt;iostream&gt; And than a namespace. 1using namespace std; After that, a main(). 1int main()&#123;&#125; The last thing. 1cout&lt;&lt;"Hello World!"&lt;&lt;endl; And put them together! 12345#include&lt;iostream&gt;using namespace std;int main()&#123; cout&lt;&lt;"Hello Wolrd!"&lt;&lt;endl;&#125; Congradulations!!!]]></content>
+      <tags>
+        <tag>testing</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[A+B(test)]]></title>
+    <url>%2F2019%2F04%2F14%2FA%2BB%2F</url>
+    <content type="text"><![CDATA[It’s just for testing. \sum_{DPJ}^{SUN}12345678#include&lt;iostream&gt;using namespace std;int main()&#123; int a,b; cin&gt;&gt;a&gt;&gt;b; cout&lt;&lt;a+b; return 0;&#125;]]></content>
+      <categories>
+        <category>basics</category>
+      </categories>
+      <tags>
+        <tag>testing</tag>
+      </tags>
+  </entry>
+</search>
