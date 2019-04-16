@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[latex testing]]></title>
-    <url>%2F2019%2F04%2F15%2Flatex-testing%2F</url>
-    <content type="text"><![CDATA[f[i]=f[i-1]+f[i-2]]]></content>
+    <title><![CDATA[ETT(Euler Tour Tree)]]></title>
+    <url>%2F2019%2F04%2F16%2FETT%2F</url>
+    <content type="text"><![CDATA[emm，看起来难出天际线，实际上呢，有LF葡萄的讲解就很好懂了]]></content>
       <tags>
-        <tag>testing</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[圆方树]]></title>
+    <url>%2F2019%2F04%2F16%2F%E5%9C%86%E6%96%B9%E6%A0%91%2F</url>
+    <content type="text"><![CDATA[emm，由方点和圆点组成的树。(命名鬼才) 前置芝士仙人掌图[图片 仙人掌]仙人掌图是一个无向连通图 仙人掌图上的任意边都至多存在于一个环里 为什么叫仙人掌图你自己画出来就知道了 [图片 仙人掌图] [图片 打孩子/仙人掌] 进入正题什么是圆♂方树[pic 维特鲁威人]?圆方树就是一个用树来表达仙人掌的一种方式(方表示环,圆表示点) 对于一个环,我们定义一个根,作为从原图根(已指定)节点DFS下来遇到的第一个这个环上的节点 那么这个节点就是这个环在圆方树上的爸爸,而这个环上的其他节点则是这个环在树上的儿子 emm,就这样 [pic] 怎么建圆♂方树well,观察一下: —-一个环就是一个联通分量 —-一个联通分量里有且只有一个环 —-每一个联通分量都是一个点双联通分量 很美妙的性质,似乎每一条性质都将我们引向一个毒瘤老头子 但是这明显不是一个简单的tarjan(tbyangz:哪里不简单了) —-首我们仍按照正常tarjan跑,当我们找到了一个联通分量的时候,这就是个环了 —-这个时候我们正处在的点,就是该环的环根了 (想想为什么) —-新建一个方点并把当前找到的联通分量中的所有点都与之连边(保留原编号) —-另外,如果搜到自己儿子与自己不在同一个联通分量中,就从自己向儿子连边(作圆方树边) 就酱 其实确实挺简单的对吧 如何使用圆♂方图]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>图论</category>
+        <category>仙人掌</category>
+      </categories>
+      <tags>
+        <tag>圆方树</tag>
+        <tag>图论</tag>
+        <tag>仙人掌</tag>
+        <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LCT填坑]]></title>
+    <url>%2F2019%2F04%2F16%2FLCT%2F</url>
+    <content type="text"><![CDATA[毕竟咕了两个多月了，还是写写LCT吧，顺便当这个博客第一篇正式文章 哈哈继续咕]]></content>
+      <tags>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -13,18 +37,7 @@
     <url>%2F2019%2F04%2F14%2Fhello-world%2F</url>
     <content type="text"><![CDATA[It’s the first thing that you should learn in C++ or any other languege. First, you need a #include. 1#include&lt;iostream&gt; And than a namespace. 1using namespace std; After that, a main(). 1int main()&#123;&#125; The last thing. 1cout&lt;&lt;"Hello World!"&lt;&lt;endl; And put them together! 12345#include&lt;iostream&gt;using namespace std;int main()&#123; cout&lt;&lt;"Hello Wolrd!"&lt;&lt;endl;&#125; Congradulations!!!]]></content>
       <tags>
-        <tag>testing</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[A+B(test)]]></title>
-    <url>%2F2019%2F04%2F14%2FA%2BB%2F</url>
-    <content type="text"><![CDATA[It’s just for testing. \sum_{DPJ}^{SUN}12345678#include&lt;iostream&gt;using namespace std;int main()&#123; int a,b; cin&gt;&gt;a&gt;&gt;b; cout&lt;&lt;a+b; return 0;&#125;]]></content>
-      <categories>
-        <category>basics</category>
-      </categories>
-      <tags>
-        <tag>testing</tag>
+        <tag>C++入门</tag>
       </tags>
   </entry>
 </search>
