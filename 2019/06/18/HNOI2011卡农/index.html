@@ -96,18 +96,18 @@
 
 
 
-  <meta name="description" content="题意描述  众所周知卡农是一种复调音乐的写作技法，小余在听卡农音乐时灵感大发，发明了一种新的音乐谱写规则。他将声音分成 n 个音阶，并将音乐分成若干个片段。音乐的每个片段都是由 1 到 n 个音阶构成的和声，即从 n 个音阶中挑选若干个音阶同时演奏出来。为了强调与卡农的不同，他规定任意两个片段所包含的音阶集合都不同。同时为了保持音乐的规律性，他还规定在一段音乐中每个音阶被奏响的次数为偶数。现在的问">
+  <meta name="description" content="这大概是我第一道听懂了的容斥题了吧(入门那种不算)">
 <meta name="keywords" content="题解,容斥,HNOI">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HNOI2011卡农题解">
 <meta property="og:url" content="http://yoursite.com/2019/06/18/HNOI2011卡农/index.html">
 <meta property="og:site_name" content="p9t6g">
-<meta property="og:description" content="题意描述  众所周知卡农是一种复调音乐的写作技法，小余在听卡农音乐时灵感大发，发明了一种新的音乐谱写规则。他将声音分成 n 个音阶，并将音乐分成若干个片段。音乐的每个片段都是由 1 到 n 个音阶构成的和声，即从 n 个音阶中挑选若干个音阶同时演奏出来。为了强调与卡农的不同，他规定任意两个片段所包含的音阶集合都不同。同时为了保持音乐的规律性，他还规定在一段音乐中每个音阶被奏响的次数为偶数。现在的问">
+<meta property="og:description" content="这大概是我第一道听懂了的容斥题了吧(入门那种不算)">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-18T13:48:57.253Z">
+<meta property="og:updated_time" content="2019-06-19T09:32:03.224Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HNOI2011卡农题解">
-<meta name="twitter:description" content="题意描述  众所周知卡农是一种复调音乐的写作技法，小余在听卡农音乐时灵感大发，发明了一种新的音乐谱写规则。他将声音分成 n 个音阶，并将音乐分成若干个片段。音乐的每个片段都是由 1 到 n 个音阶构成的和声，即从 n 个音阶中挑选若干个音阶同时演奏出来。为了强调与卡农的不同，他规定任意两个片段所包含的音阶集合都不同。同时为了保持音乐的规律性，他还规定在一段音乐中每个音阶被奏响的次数为偶数。现在的问">
+<meta name="twitter:description" content="这大概是我第一道听懂了的容斥题了吧(入门那种不算)">
 
 
 
@@ -413,12 +413,24 @@
                 
               
 
-              <time title="创建时间：2019-06-18 21:38:16 / 修改时间：21:48:57" itemprop="dateCreated datePublished" datetime="2019-06-18T21:38:16+08:00">2019-06-18</time>
+              <time title="创建时间：2019-06-18 21:38:16" itemprop="dateCreated datePublished" datetime="2019-06-18T21:38:16+08:00">2019-06-18</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-06-19 17:32:03" itemprop="dateModified" datetime="2019-06-19T17:32:03+08:00">2019-06-19</time>
               
             
           </span>
@@ -491,23 +503,17 @@
       
 
       
-        <h1 id="题意描述"><a href="#题意描述" class="headerlink" title="题意描述"></a>题意描述</h1><hr>
-<hr>
-<p>众所周知卡农是一种复调音乐的写作技法，小余在听卡农音乐时灵感大发，发明了一种新的音乐谱写规则。他将声音分成 n 个音阶，并将音乐分成若干个片段。音乐的每个片段都是由 1 到 n 个音阶构成的和声，即从 n 个音阶中挑选若干个音阶同时演奏出来。为了强调与卡农的不同，他规定任意两个片段所包含的音阶集合都不同。同时为了保持音乐的规律性，他还规定在一段音乐中每个音阶被奏响的次数为偶数。现在的问题是：小余想知道包含 m 个片段的音乐一共有多少种。两段音乐 a 和 b 同种当且仅当将 a 的片段重新排列后可以得到 b。例如：假设 a为(1,2),(2,3)，b 为(3,2),(2,1)，那么 a 与 b 就是同种音乐。由于种数很多，你只需要输出答案模 100000007（质数）的结果。</p>
-<h1 id="题意简述"><a href="#题意简述" class="headerlink" title="题意简述"></a>题意简述</h1><hr>
-<hr>
-<p>有一个集:$S{1,2,3,\cdots,n}$让你在里面选择$m$个集合并且满足如下性质:</p>
+        <p>这大概是我第一道听懂了的容斥题了吧(入门那种不算)</p>
+<a id="more"></a>
+<h1 id="题意描述"><a href="#题意描述" class="headerlink" title="题意描述"></a>题意描述</h1><p>众所周知卡农是一种复调音乐的写作技法，小余在听卡农音乐时灵感大发，发明了一种新的音乐谱写规则。他将声音分成 n 个音阶，并将音乐分成若干个片段。音乐的每个片段都是由 1 到 n 个音阶构成的和声，即从 n 个音阶中挑选若干个音阶同时演奏出来。为了强调与卡农的不同，他规定任意两个片段所包含的音阶集合都不同。同时为了保持音乐的规律性，他还规定在一段音乐中每个音阶被奏响的次数为偶数。现在的问题是：小余想知道包含 m 个片段的音乐一共有多少种。两段音乐 a 和 b 同种当且仅当将 a 的片段重新排列后可以得到 b。例如：假设 a为(1,2),(2,3)，b 为(3,2),(2,1)，那么 a 与 b 就是同种音乐。由于种数很多，你只需要输出答案模 100000007（质数）的结果。</p>
+<h1 id="题意简述"><a href="#题意简述" class="headerlink" title="题意简述"></a>题意简述</h1><p>有一个集:$S{1,2,3,\cdots,n}$让你在里面选择$m$个集合并且满足如下性质:</p>
 <ul>
 <li><strong>不能为空集</strong></li>
 <li><strong>没有重复的集合</strong></li>
 <li><strong>每个元素的总出现次数必定为偶数次</strong></li>
 </ul>
-<h1 id="分析一波"><a href="#分析一波" class="headerlink" title="分析一波"></a>分析一波</h1><hr>
-<hr>
-<h2 id="主要算法分析"><a href="#主要算法分析" class="headerlink" title="主要算法分析"></a>主要算法分析</h2><hr>
-<p>首先我们可以很显然地知道不一定满足上述三个条件的所有情况:$A_{2^n}^{i}$但是这里我们也显然可以排除空集情况,变成:$A_{2^n -1}^{i}$那么我们既然可以知道所有的情况，也知道用来排除错误情况的条件,那么就显然容斥咯(说的自在,自己还不是没想出来)</p>
-<h2 id="算法实现分析"><a href="#算法实现分析" class="headerlink" title="算法实现分析"></a>算法实现分析</h2><hr>
-<p>分析上述三点条件,发现第三条能够实现从选择了$i-1$个集合具体状态直接推导出选择了$i$个的状态</p>
+<h1 id="分析一波"><a href="#分析一波" class="headerlink" title="分析一波"></a>分析一波</h1><h2 id="主要算法分析"><a href="#主要算法分析" class="headerlink" title="主要算法分析"></a>主要算法分析</h2><p>首先我们可以很显然地知道不一定满足上述三个条件的所有情况:$A_{2^n}^{i}$但是这里我们也显然可以排除空集情况,变成:$A_{2^n -1}^{i}$那么我们既然可以知道所有的情况，也知道用来排除错误情况的条件,那么就显然容斥咯(说的自在,自己还不是没想出来)</p>
+<h2 id="算法实现分析"><a href="#算法实现分析" class="headerlink" title="算法实现分析"></a>算法实现分析</h2><p>分析上述三点条件,发现第三条能够实现从选择了$i-1$个集合具体状态直接推导出选择了$i$个的状态</p>
 <p><em>$f[i]:$选择i个集合的可能状态数</em></p>
 <p>所以选i个的状态数被排除到了$A_{2^n -1}^{i-1}$</p>
 <p>那么再用条件1推导:发现如果要当前选择集合为空集,那么前i-1个就一定能够组成一个合法状态,所以,条件1又排除掉了$f[i-1]$个状态</p>
@@ -516,9 +522,7 @@
 <script type="math/tex; mode=display">
 f[i]=A_{2^n-1}^{i-1}-f[i-1]-f[i-2]\cdot(i-1)\cdot (2^n -1-(i-2))\\
 f[i]=A_{2^n-1}^{i-1}-f[i-1]-f[i-2]\cdot(i-1)\cdot (2^n+1-i)\\</script><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bitset&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;set&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ll long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> db double</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> mod 100000007</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> maxn 1000005</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function">ll <span class="title">max</span><span class="params">(ll a,ll b)</span></span>&#123;<span class="keyword">if</span>(a&gt;b)<span class="keyword">return</span> a;<span class="keyword">return</span> b;&#125;</span><br><span class="line"><span class="function">ll <span class="title">min</span><span class="params">(ll a,ll b)</span></span>&#123;<span class="keyword">if</span>(a&lt;b)<span class="keyword">return</span> a;<span class="keyword">return</span> b;&#125;</span><br><span class="line"><span class="function">ll <span class="title">read</span><span class="params">()</span></span>&#123;</span><br><span class="line">	ll ans=<span class="number">0</span>,fh=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">char</span> c=getchar();</span><br><span class="line">	<span class="keyword">while</span>(c&lt;<span class="string">'0'</span>||c&gt;<span class="string">'9'</span>)&#123;</span><br><span class="line">		<span class="keyword">if</span>(c==<span class="string">'-'</span>)fh=<span class="number">-1</span>;</span><br><span class="line">		c=getchar();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span>(c&gt;=<span class="string">'0'</span>&amp;&amp;c&lt;=<span class="string">'9'</span>)&#123;</span><br><span class="line">		ans=ans*<span class="number">10</span>+c-<span class="string">'0'</span>;</span><br><span class="line">		c=getchar();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ans*fh;</span><br><span class="line">&#125;</span><br><span class="line">ll n,m,f[maxn],MX=<span class="number">1</span>,A[maxn],qwq;</span><br><span class="line"><span class="function">ll <span class="title">Pow</span><span class="params">(ll x,ll y,ll p)</span></span>&#123;</span><br><span class="line">	ll ret=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(y)&#123;</span><br><span class="line">		<span class="keyword">if</span>(y&amp;<span class="number">1</span>)(ret*=x)%=p;</span><br><span class="line">		(x*=x)%=p;</span><br><span class="line">		y&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> ret%mod;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	n=read();m=read();</span><br><span class="line">	<span class="keyword">if</span>(m==<span class="number">1</span>||m==<span class="number">2</span>)&#123;<span class="built_in">puts</span>(<span class="string">"0"</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;</span><br><span class="line">	f[<span class="number">1</span>]=<span class="number">0</span>;f[<span class="number">2</span>]=<span class="number">0</span>;</span><br><span class="line">	A[<span class="number">0</span>]=<span class="number">1</span>;qwq=<span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)(qwq*=<span class="number">2</span>)%=mod;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)&#123;</span><br><span class="line">		A[i]=A[i<span class="number">-1</span>]*(qwq-i)%mod;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">3</span>;i&lt;=m;i++)&#123;</span><br><span class="line">		f[i]=(A[i<span class="number">-1</span>]-f[i<span class="number">-1</span>]+mod-f[i<span class="number">-2</span>]*(i<span class="number">-1</span>)%mod*(qwq-i+<span class="number">1</span>)%mod+mod)%mod;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++)(MX*=i)%=mod;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;f[m]*Pow(MX,mod<span class="number">-2</span>,mod)%mod;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="完结撒花！"><a href="#完结撒花！" class="headerlink" title="完结撒花！"></a>完结撒花！</h1><hr>
-<hr>
-
+<h1 id="完结撒花！"><a href="#完结撒花！" class="headerlink" title="完结撒花！"></a>完结撒花！</h1>
       
     </div>
 
