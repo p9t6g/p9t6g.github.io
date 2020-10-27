@@ -366,6 +366,266 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/10/27/NOIP复习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="p9t6g">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="p9t6g">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2020/10/27/NOIP复习/" class="post-title-link" itemprop="url">未命名</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-10-27 23:36:59 / 修改时间：23:15:03" itemprop="dateCreated datePublished" datetime="2020-10-27T23:36:59+08:00">2020-10-27</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="特殊思路"><a href="#特殊思路" class="headerlink" title="特殊思路"></a>特殊思路</h1><ul>
+<li>环断边:对于环上存在的问题,可以考虑将环倍增然后断为链.一般用于从某点开始对环进行遍历的问题</li>
+<li>权值与下标交换:将答案设为下标,将下标放入数组的权值.适用于答案极值偏小,但是某一下标过大且表达的信息过于离散的问题(如<a href="https://loj.ac/problem/3254" target="_blank" rel="noopener">JOI 2020 final-集邮比赛</a>),如果仍然放不下的话可以考虑二分答案</li>
+<li>对于元素独立,询问独立且多个限制之间互相独立的问题,可以先通过遍历来筛选元素,且降低元素的特异性,使得后续处理与存储更为优秀,实际可以总结为<strong>提取出所需要元素的有效信息,优化存储/处理方式</strong></li>
+</ul>
+<h1 id="做题思想"><a href="#做题思想" class="headerlink" title="做题思想"></a>做题思想</h1><h2 id="解决后效性"><a href="#解决后效性" class="headerlink" title="解决后效性"></a>解决后效性</h2><p>首先在设置状态时,要搞清楚哪些变量之间互不影响,前后计算没有任何影响,一般会将其设为状态</p>
+<p>其次,对于设置完的状态出现后效性问题,有两种解决方式</p>
+<ul>
+<li>再设置一个下标来分开各个选择以消除后效性(因为可获得之前选择的更多信息所以后效性不影响)</li>
+<li>类似于上一种,可以尝试 将状态之间转移的关系提前计算为一个数组,并且在这个数组中处理后效性.这种做法要求各个状态之间的转移经常规律性变化(类似于矩阵)</li>
+</ul>
+<h1 id="基础算法"><a href="#基础算法" class="headerlink" title="基础算法"></a>基础算法</h1><h2 id="高精度"><a href="#高精度" class="headerlink" title="高精度"></a>高精度</h2><p>一个工具,当计算的数据达到需要的程度时使用即可</p>
+<h2 id="枚举算法"><a href="#枚举算法" class="headerlink" title="枚举算法"></a>枚举算法</h2><p>一般出现在当前题目的计算要求过于复杂,且数据范围极小时</p>
+<p>直接对于一些可能出现状况极少的变量进行枚举</p>
+<h2 id="递推"><a href="#递推" class="headerlink" title="递推"></a>递推</h2><p>通过特定方式进行多次运算,最终解决复杂问题</p>
+<p>与dp的主要区别在于是否动态比较更改答案,但是信息学一般不做区分</p>
+<h3 id="一般性递推"><a href="#一般性递推" class="headerlink" title="一般性递推"></a>一般性递推</h3><p>按一个线性方式遍历数据然后以此不断更新答案获得最优解</p>
+<h3 id="组合计数"><a href="#组合计数" class="headerlink" title="组合计数"></a>组合计数</h3><p>由于研究对象会有一定限制,所以利用其他的数组实现阶段性地递推或者提高状态描述维度以解决限制</p>
+<h3 id="部分博弈问题"><a href="#部分博弈问题" class="headerlink" title="部分博弈问题"></a>部分博弈问题</h3><p>通过合适的状态设定获得博弈图,然后根据题目规则来获得当前博弈图的必胜必败态的关系,然后由唯一确定的最终状态(必胜态)逆向推导获得答案</p>
+<p>由于递推非常具有规律性,所以经常可以将递推过程简化</p>
+<h3 id="dp"><a href="#dp" class="headerlink" title="dp"></a>dp</h3><p>详见dp类</p>
+<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>仅一种实现方式</p>
+<h1 id="分治"><a href="#分治" class="headerlink" title="分治"></a>分治</h1><p>主要标志: 当数据小到一定程度(即子问题)时,问题易解决且问题答案可以通过子问题答案合并获得</p>
+<h2 id="CDQ"><a href="#CDQ" class="headerlink" title="CDQ"></a>CDQ</h2><p>当一个数组上的计数类问题或最值问题存在多个要求且相互独立时可以使用CDQ来依次解决(一般第一维在最外层排序解决,第二维在分治过程中排序解决,第三维使用线段树或树状数组解决)</p>
+<p>当相互独立的限制超过三个时CDQ一般不是最优解</p>
+<h2 id="最优解类分治"><a href="#最优解类分治" class="headerlink" title="最优解类分治"></a>最优解类分治</h2><p>一般下一层所得结果可以限制上层需要询问答案的范围</p>
+<h2 id="点分治"><a href="#点分治" class="headerlink" title="点分治"></a>点分治</h2><p>适用于解决大规模树上路径信息的问题</p>
+<h2 id="边分治"><a href="#边分治" class="headerlink" title="边分治"></a>边分治</h2><p>与点分治类似,更适合解决边上问题</p>
+<h2 id="点分树"><a href="#点分树" class="headerlink" title="点分树"></a>点分树</h2><p>一种将树的最大深度控制在严格$log(n)$的重构方式,适用于与树原形态无关的问题</p>
+<h1 id="贪心"><a href="#贪心" class="headerlink" title="贪心"></a>贪心</h1><h2 id="区间最大覆盖个数"><a href="#区间最大覆盖个数" class="headerlink" title="区间最大覆盖个数"></a>区间最大覆盖个数</h2><p>在一个数轴上按照区间覆盖,求最大能放下的区间个数</p>
+<p>按右端点排序依次取</p>
+<h2 id="区间选点"><a href="#区间选点" class="headerlink" title="区间选点"></a>区间选点</h2><p>在数轴上放点使得所有给定区间内都有点</p>
+<p>按右端点排序,尽量往右边放</p>
+<h2 id="区间覆盖"><a href="#区间覆盖" class="headerlink" title="区间覆盖"></a>区间覆盖</h2><p>在数轴上用尽可能少的区间表示所有给定区间的并</p>
+<p>按左端点排序,依次查询合并</p>
+<h1 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h1><h2 id="剪枝"><a href="#剪枝" class="headerlink" title="剪枝"></a>剪枝</h2><ul>
+<li>减少搜索范围</li>
+<li>当前状态无法获得更优解</li>
+<li>当前状态无法得解</li>
+</ul>
+<h2 id="舞蹈链"><a href="#舞蹈链" class="headerlink" title="舞蹈链"></a>舞蹈链</h2><h1 id><a href="#" class="headerlink" title="!!!!!!!!!!!!"></a>!!!!!!!!!!!!</h1><h1 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h1><h2 id="莫队"><a href="#莫队" class="headerlink" title="莫队"></a>莫队</h2><p>适用于可以在$O(1)$的时间将区间$[L,R]$的答案转移得到$[L,R+1]$与$[L-1,R]$的答案时</p>
+<ul>
+<li><p>奇偶性优化</p>
+<p>对于奇数块的询问,按$R$从小到大排序，对于偶数块的询问，按$R$从大到小排序</p>
+</li>
+</ul>
+<h2 id="三分"><a href="#三分" class="headerlink" title="三分"></a>三分</h2><p>适用于答案存在于一个单峰函数的极值问题上</p>
+<h1 id="dp-1"><a href="#dp-1" class="headerlink" title="dp"></a>dp</h1><h2 id="坐标类"><a href="#坐标类" class="headerlink" title="坐标类"></a>坐标类</h2><ul>
+<li>所有方案数</li>
+<li>一条最优路径</li>
+<li>两条最优路径(状态中同时表示两条路径的到达点,一同转移)</li>
+</ul>
+<p><strong>提高组dp不一定会很复杂,所以尝试思考高维的状态来表达</strong></p>
+<h2 id="线性"><a href="#线性" class="headerlink" title="线性"></a>线性</h2><h3 id="LIS"><a href="#LIS" class="headerlink" title="LIS"></a>LIS</h3><ul>
+<li>单调队列优化</li>
+<li>值域二分优化</li>
+</ul>
+<h3 id="LCS"><a href="#LCS" class="headerlink" title="LCS"></a>LCS</h3><ul>
+<li>同样,注意考虑高维状态来维护</li>
+</ul>
+<h3 id="区间"><a href="#区间" class="headerlink" title="区间"></a>区间</h3><ul>
+<li>对于环上问题可将环拓展为两倍,然后取区间长度为n的答案的最优值</li>
+</ul>
+<h2 id="背包"><a href="#背包" class="headerlink" title="背包"></a>背包</h2><h3 id="01"><a href="#01" class="headerlink" title="01"></a>01</h3><script type="math/tex; mode=display">
+f[i]:使用i的空间的最大价值\\
+f[j]=max(f[j],f[j-c[i]]+v[i])</script><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> j=m;j&gt;=<span class="number">1</span>;j--)&#123;</span><br><span class="line">        f[j]=max(f[j],f[j-c[i]]+v[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="完全"><a href="#完全" class="headerlink" title="完全"></a>完全</h3><script type="math/tex; mode=display">
+f[i]:使用i的空间的最大价值\\
+f[j]=max(f[j],f[j-c[i]]+v[i])</script><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=c[i];j&lt;=m;j++)&#123;</span><br><span class="line">        f[j]=max(f[j],f[j-c[i]]+v[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="多重"><a href="#多重" class="headerlink" title="多重"></a>多重</h3><script type="math/tex; mode=display">
+f[i]:使用i的空间的最大价值\\
+f[j]=max_{k=1}^{num_i}(f[j],f[j-k*c[i]]+k*v[i])</script><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=m;j&gt;=<span class="number">1</span>;j--)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">1</span>;k&lt;=num[i];k++)&#123;</span><br><span class="line">            f[j]=max(f[j],f[j-k*c[i]]+k*v[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>二进制优化</li>
+</ul>
+<p>将k个i物品拆成许多个包含$2^x$个的i物品的物品集,当作新物品,将多重转化为01</p>
+<ul>
+<li>单调队列优化</li>
+</ul>
+<p>由于单调队列基本的dp方程并非仅与当前枚举变量有关,所以改变枚举方式</p>
+<p>令$\Large g_{x,y}=f_{i,x\cdot c_i+y}$,$\Large g’_{x,y}=f_{i-1,x\cdot c_i+y}$</p>
+<script type="math/tex; mode=display">
+\Large g_{x,y}=max(g'_{x-k,y}+k\cdot v)\\
+\Large g_{x,y}=max(g'_{x-k,y}-(x-k)\cdot v)+x\cdot v</script><p>这里注意到max内式子只与x-k有关,并且我们之前的枚举会访问他,所以可以直接单调优化</p>
+<h3 id="混合"><a href="#混合" class="headerlink" title="混合"></a>混合</h3><p>对于不同的物品使用不同的方程dp即可</p>
+<h3 id="二维费用"><a href="#二维费用" class="headerlink" title="二维费用"></a>二维费用</h3><p>与一维类似,两种限制分别枚举,不冲突</p>
+<h3 id="分组背包"><a href="#分组背包" class="headerlink" title="分组背包"></a>分组背包</h3><p>先枚举组,再枚举组内物品,最后枚举消耗(也就是f数组的参数)</p>
+<h3 id="依赖背包"><a href="#依赖背包" class="headerlink" title="依赖背包"></a>依赖背包</h3><p>对于每一个主件及其附带附件,将所有可能的购买情况记录下来,当作分组背包做</p>
+<p>对于多叉树,先算子节点,再算父节点</p>
+<h2 id="最大子序列-子矩阵及类似问题"><a href="#最大子序列-子矩阵及类似问题" class="headerlink" title="最大子序列/子矩阵及类似问题"></a>最大子序列/子矩阵及类似问题</h2><h3 id="一维"><a href="#一维" class="headerlink" title="一维"></a>一维</h3><p>简单dp,类似01背包的做法</p>
+<h3 id="二维"><a href="#二维" class="headerlink" title="二维"></a>二维</h3><p>对于规定大小的类型,可以直接前缀合优化解决</p>
+<p>对于未规定大小的类型,首先枚举矩形的左右边界,然后将上下当做一维问题解决</p>
+<p><em>注意n,m范围,有可能会出现特殊情况,如m&lt;=2</em></p>
+<h2 id="树型"><a href="#树型" class="headerlink" title="树型"></a>树型</h2><h3 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h3><p>由于二叉树每个点儿子都极少,所以可能存在枚举左右儿子分配资源(消耗)或者枚举左右01分别状况的dp</p>
+<h3 id="子树影响"><a href="#子树影响" class="headerlink" title="子树影响"></a>子树影响</h3><p>有些时候看似题目本身存在后效性,但是可以通过一定的理论证明来优化dp方程或者增加状态,以消除后效性</p>
+<p>如<a href="https://www.luogu.com.cn/problem/P2899" target="_blank" rel="noopener">Luogu P2899</a></p>
+<h2 id="多次"><a href="#多次" class="headerlink" title="多次"></a>多次</h2><p>实际只是dp问题无意义的独立嵌套,需要注意不忘记这一做法即可.对于信息过于复杂时,可以尝试考虑通过多次dp来简化问题</p>
+<p>如<a href="https://www.luogu.com.cn/problem/P4158" target="_blank" rel="noopener">SCOI2009-粉刷匠</a>,<a href="https://oj.bashu.com.cn/code/problempage.php?problem_id=1132" target="_blank" rel="noopener">JZOJ 1303-骑士</a></p>
+<h2 id="状压"><a href="#状压" class="headerlink" title="状压"></a>状压</h2><p>状压题目的标志性一般极其明显,当数据范围极小但是每个点之间的选择状态又会造成影响时,可以考虑状压</p>
+<ul>
+<li>很多时候仅仅压缩一维状态并不能设出无后效性的状态,所以可以设置类似于最后到达哪个点这样类似的第二维甚至第三维</li>
+</ul>
+<h2 id="单调队列"><a href="#单调队列" class="headerlink" title="单调队列"></a>单调队列</h2><p>将dp方程写出后进行变形,如果最后能够做到使min/max中不存在与i有关的变量的可以进行单调队列优化</p>
+<h2 id="斜率优化"><a href="#斜率优化" class="headerlink" title="斜率优化"></a>斜率优化</h2><p>对于一类动态规划问题,若可以将转移方程变形为如下形式,则可以将决策点转化为二维坐标系上具象化的点</p>
+<script type="math/tex; mode=display">
+k_1x+f[i]*k_2+b=y</script><p>其中$k_1,b$与当前点有关,$x,y$与决策点有关,而$k_2$为常数,仅与方程有关</p>
+<ul>
+<li>方程变形过程中主要注意将与$i$有关,与$j$有关,与$i,j$有关的量分开</li>
+</ul>
+<h3 id="斜率单调-amp-决策点单调"><a href="#斜率单调-amp-决策点单调" class="headerlink" title="斜率单调&amp;决策点单调"></a>斜率单调&amp;决策点单调</h3><p><em>决策点单调即x单调</em></p>
+<p>直接使用单调队列维护</p>
+<h3 id="斜率不单调-决策点不单调"><a href="#斜率不单调-决策点不单调" class="headerlink" title="斜率不单调|决策点不单调"></a>斜率不单调|决策点不单调</h3><p>CDQ分治或平衡树解决</p>
+<h2 id="决策单调性"><a href="#决策单调性" class="headerlink" title="决策单调性"></a>决策单调性</h2><p>对于最优化dp(即转移只来自一个点,而非许多状态的加和),若通过理论分析或者打表分析得到决策点只向一个方向变化的结论,即可只从上一个状态的决策点向后枚举转移</p>
+<p>对于任何最优化dp都可以尝试考虑单调性优化</p>
+<h3 id="四边形不等式"><a href="#四边形不等式" class="headerlink" title="四边形不等式"></a>四边形不等式</h3><p>本质就是决策单调性,但是形式稍特殊,一般还是使用打表分析决策点是否单调</p>
+<ul>
+<li>形式类似区间dp</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/18/折半搜索/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -428,7 +688,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-19 18:04:58" itemprop="dateModified" datetime="2019-06-19T18:04:58+08:00">2019-06-19</time>
+                <time title="修改时间：2019-06-30 13:04:39" itemprop="dateModified" datetime="2019-06-30T13:04:39+08:00">2019-06-30</time>
               
             
           </span>
@@ -1708,7 +1968,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1836,7 +2096,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -2302,6 +2562,8 @@
 
   
   
+    
+      
     
       
     
