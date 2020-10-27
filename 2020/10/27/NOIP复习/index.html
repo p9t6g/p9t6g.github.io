@@ -96,17 +96,18 @@
 
 
 
-  <meta name="description" content="特殊思路 环断边:对于环上存在的问题,可以考虑将环倍增然后断为链.一般用于从某点开始对环进行遍历的问题 权值与下标交换:将答案设为下标,将下标放入数组的权值.适用于答案极值偏小,但是某一下标过大且表达的信息过于离散的问题(如JOI 2020 final-集邮比赛),如果仍然放不下的话可以考虑二分答案 对于元素独立,询问独立且多个限制之间互相独立的问题,可以先通过遍历来筛选元素,且降低元素的特异性,">
+  <meta name="description" content="前言走了,回来了,不管如何,这条路似乎已经延伸得很漫长了,从兴趣,变成兼修,变成接近专修,又变回兴趣,,这中间的路太长,以至于虽然百味杂陈,却说不出什么感想. 除了爱与恨以外,我有时候觉得信息学已经成为了我生命中无法割舍的一部分了,不知是好是坏  这样长篇的总结,大概在我还能被称作所谓的竞赛选手时,不会有多少了 亦是最后的挣扎,亦是痛心的告别,希望这条路还能再延伸那最后的一段吧 特殊思路 环断边">
+<meta name="keywords" content="总结,NOIP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="p9t6g">
+<meta property="og:title" content="noip2020复习&amp;总结">
 <meta property="og:url" content="http://yoursite.com/2020/10/27/NOIP复习/index.html">
 <meta property="og:site_name" content="p9t6g">
-<meta property="og:description" content="特殊思路 环断边:对于环上存在的问题,可以考虑将环倍增然后断为链.一般用于从某点开始对环进行遍历的问题 权值与下标交换:将答案设为下标,将下标放入数组的权值.适用于答案极值偏小,但是某一下标过大且表达的信息过于离散的问题(如JOI 2020 final-集邮比赛),如果仍然放不下的话可以考虑二分答案 对于元素独立,询问独立且多个限制之间互相独立的问题,可以先通过遍历来筛选元素,且降低元素的特异性,">
+<meta property="og:description" content="前言走了,回来了,不管如何,这条路似乎已经延伸得很漫长了,从兴趣,变成兼修,变成接近专修,又变回兴趣,,这中间的路太长,以至于虽然百味杂陈,却说不出什么感想. 除了爱与恨以外,我有时候觉得信息学已经成为了我生命中无法割舍的一部分了,不知是好是坏  这样长篇的总结,大概在我还能被称作所谓的竞赛选手时,不会有多少了 亦是最后的挣扎,亦是痛心的告别,希望这条路还能再延伸那最后的一段吧 特殊思路 环断边">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-10-27T15:15:03.107Z">
+<meta property="og:updated_time" content="2020-10-27T16:18:04.567Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="p9t6g">
-<meta name="twitter:description" content="特殊思路 环断边:对于环上存在的问题,可以考虑将环倍增然后断为链.一般用于从某点开始对环进行遍历的问题 权值与下标交换:将答案设为下标,将下标放入数组的权值.适用于答案极值偏小,但是某一下标过大且表达的信息过于离散的问题(如JOI 2020 final-集邮比赛),如果仍然放不下的话可以考虑二分答案 对于元素独立,询问独立且多个限制之间互相独立的问题,可以先通过遍历来筛选元素,且降低元素的特异性,">
+<meta name="twitter:title" content="noip2020复习&amp;总结">
+<meta name="twitter:description" content="前言走了,回来了,不管如何,这条路似乎已经延伸得很漫长了,从兴趣,变成兼修,变成接近专修,又变回兴趣,,这中间的路太长,以至于虽然百味杂陈,却说不出什么感想. 除了爱与恨以外,我有时候觉得信息学已经成为了我生命中无法割舍的一部分了,不知是好是坏  这样长篇的总结,大概在我还能被称作所谓的竞赛选手时,不会有多少了 亦是最后的挣扎,亦是痛心的告别,希望这条路还能再延伸那最后的一段吧 特殊思路 环断边">
 
 
 
@@ -124,7 +125,7 @@
   };
 </script>
 
-  <title> | p9t6g</title>
+  <title>noip2020复习&总结 | p9t6g</title>
   
 
 
@@ -386,7 +387,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">noip2020复习&总结
 
               
             
@@ -412,16 +413,46 @@
                 
               
 
-              <time title="创建时间：2020-10-27 23:36:59 / 修改时间：23:15:03" itemprop="dateCreated datePublished" datetime="2020-10-27T23:36:59+08:00">2020-10-27</time>
+              <time title="创建时间：2020-10-27 23:36:59" itemprop="dateCreated datePublished" datetime="2020-10-27T23:36:59+08:00">2020-10-27</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-10-28 00:18:04" itemprop="dateModified" datetime="2020-10-28T00:18:04+08:00">2020-10-28</time>
               
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/知识总结/" itemprop="url" rel="index"><span itemprop="name">知识总结</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -451,7 +482,13 @@
       
 
       
-        <h1 id="特殊思路"><a href="#特殊思路" class="headerlink" title="特殊思路"></a>特殊思路</h1><ul>
+        <a id="more"></a>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>走了,回来了,不管如何,这条路似乎已经延伸得很漫长了,从兴趣,变成兼修,变成接近专修,又变回兴趣,,这中间的路太长,以至于虽然百味杂陈,却说不出什么感想.</p>
+<p>除了爱与恨以外,我有时候觉得信息学已经成为了我生命中无法割舍的一部分了,不知是好是坏</p>
+<hr>
+<p>这样长篇的总结,大概在我还能被称作所谓的竞赛选手时,不会有多少了</p>
+<p>亦是最后的挣扎,亦是痛心的告别,希望这条路还能再延伸那最后的一段吧</p>
+<h1 id="特殊思路"><a href="#特殊思路" class="headerlink" title="特殊思路"></a>特殊思路</h1><ul>
 <li>环断边:对于环上存在的问题,可以考虑将环倍增然后断为链.一般用于从某点开始对环进行遍历的问题</li>
 <li>权值与下标交换:将答案设为下标,将下标放入数组的权值.适用于答案极值偏小,但是某一下标过大且表达的信息过于离散的问题(如<a href="https://loj.ac/problem/3254" target="_blank" rel="noopener">JOI 2020 final-集邮比赛</a>),如果仍然放不下的话可以考虑二分答案</li>
 <li>对于元素独立,询问独立且多个限制之间互相独立的问题,可以先通过遍历来筛选元素,且降低元素的特异性,使得后续处理与存储更为优秀,实际可以总结为<strong>提取出所需要元素的有效信息,优化存储/处理方式</strong></li>
@@ -590,6 +627,14 @@ k_1x+f[i]*k_2+b=y</script><p>其中$k_1,b$与当前点有关,$x,y$与决策点�
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/总结/" rel="tag"># 总结</a>
+          
+            <a href="/tags/NOIP/" rel="tag"># NOIP</a>
+          
+        </div>
+      
 
       
       
@@ -719,7 +764,9 @@ k_1x+f[i]*k_2+b=y</script><p>其中$k_1,b$与当前点有关,$x,y$与决策点�
                     
                       
                     
-                    <span class="site-state-item-count">12</span>
+                      
+                    
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -764,7 +811,11 @@ k_1x+f[i]*k_2+b=y</script><p>其中$k_1,b$与当前点有关,$x,y$与决策点�
                     
                       
                     
-                    <span class="site-state-item-count">14</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -802,7 +853,7 @@ k_1x+f[i]*k_2+b=y</script><p>其中$k_1,b$与当前点有关,$x,y$与决策点�
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#特殊思路"><span class="nav-number">1.</span> <span class="nav-text">特殊思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#做题思想"><span class="nav-number">2.</span> <span class="nav-text">做题思想</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#解决后效性"><span class="nav-number">2.1.</span> <span class="nav-text">解决后效性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基础算法"><span class="nav-number">3.</span> <span class="nav-text">基础算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#高精度"><span class="nav-number">3.1.</span> <span class="nav-text">高精度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#枚举算法"><span class="nav-number">3.2.</span> <span class="nav-text">枚举算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递推"><span class="nav-number">3.3.</span> <span class="nav-text">递推</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一般性递推"><span class="nav-number">3.3.1.</span> <span class="nav-text">一般性递推</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组合计数"><span class="nav-number">3.3.2.</span> <span class="nav-text">组合计数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部分博弈问题"><span class="nav-number">3.3.3.</span> <span class="nav-text">部分博弈问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dp"><span class="nav-number">3.3.4.</span> <span class="nav-text">dp</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递归"><span class="nav-number">3.4.</span> <span class="nav-text">递归</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分治"><span class="nav-number">4.</span> <span class="nav-text">分治</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CDQ"><span class="nav-number">4.1.</span> <span class="nav-text">CDQ</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最优解类分治"><span class="nav-number">4.2.</span> <span class="nav-text">最优解类分治</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#点分治"><span class="nav-number">4.3.</span> <span class="nav-text">点分治</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#边分治"><span class="nav-number">4.4.</span> <span class="nav-text">边分治</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#点分树"><span class="nav-number">4.5.</span> <span class="nav-text">点分树</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#贪心"><span class="nav-number">5.</span> <span class="nav-text">贪心</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#区间最大覆盖个数"><span class="nav-number">5.1.</span> <span class="nav-text">区间最大覆盖个数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区间选点"><span class="nav-number">5.2.</span> <span class="nav-text">区间选点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区间覆盖"><span class="nav-number">5.3.</span> <span class="nav-text">区间覆盖</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搜索"><span class="nav-number">6.</span> <span class="nav-text">搜索</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#剪枝"><span class="nav-number">6.1.</span> <span class="nav-text">剪枝</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#舞蹈链"><span class="nav-number">6.2.</span> <span class="nav-text">舞蹈链</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-number">7.</span> <span class="nav-text">!!!!!!!!!!!!</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#杂项"><span class="nav-number">8.</span> <span class="nav-text">杂项</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#莫队"><span class="nav-number">8.1.</span> <span class="nav-text">莫队</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三分"><span class="nav-number">8.2.</span> <span class="nav-text">三分</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#dp-1"><span class="nav-number">9.</span> <span class="nav-text">dp</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#坐标类"><span class="nav-number">9.1.</span> <span class="nav-text">坐标类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性"><span class="nav-number">9.2.</span> <span class="nav-text">线性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#LIS"><span class="nav-number">9.2.1.</span> <span class="nav-text">LIS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LCS"><span class="nav-number">9.2.2.</span> <span class="nav-text">LCS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#区间"><span class="nav-number">9.2.3.</span> <span class="nav-text">区间</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#背包"><span class="nav-number">9.3.</span> <span class="nav-text">背包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#01"><span class="nav-number">9.3.1.</span> <span class="nav-text">01</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#完全"><span class="nav-number">9.3.2.</span> <span class="nav-text">完全</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多重"><span class="nav-number">9.3.3.</span> <span class="nav-text">多重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#混合"><span class="nav-number">9.3.4.</span> <span class="nav-text">混合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二维费用"><span class="nav-number">9.3.5.</span> <span class="nav-text">二维费用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分组背包"><span class="nav-number">9.3.6.</span> <span class="nav-text">分组背包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#依赖背包"><span class="nav-number">9.3.7.</span> <span class="nav-text">依赖背包</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最大子序列-子矩阵及类似问题"><span class="nav-number">9.4.</span> <span class="nav-text">最大子序列/子矩阵及类似问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一维"><span class="nav-number">9.4.1.</span> <span class="nav-text">一维</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二维"><span class="nav-number">9.4.2.</span> <span class="nav-text">二维</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#树型"><span class="nav-number">9.5.</span> <span class="nav-text">树型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#二叉树"><span class="nav-number">9.5.1.</span> <span class="nav-text">二叉树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子树影响"><span class="nav-number">9.5.2.</span> <span class="nav-text">子树影响</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多次"><span class="nav-number">9.6.</span> <span class="nav-text">多次</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#状压"><span class="nav-number">9.7.</span> <span class="nav-text">状压</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单调队列"><span class="nav-number">9.8.</span> <span class="nav-text">单调队列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#斜率优化"><span class="nav-number">9.9.</span> <span class="nav-text">斜率优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#斜率单调-amp-决策点单调"><span class="nav-number">9.9.1.</span> <span class="nav-text">斜率单调&amp;决策点单调</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#斜率不单调-决策点不单调"><span class="nav-number">9.9.2.</span> <span class="nav-text">斜率不单调|决策点不单调</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#决策单调性"><span class="nav-number">9.10.</span> <span class="nav-text">决策单调性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#四边形不等式"><span class="nav-number">9.10.1.</span> <span class="nav-text">四边形不等式</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#特殊思路"><span class="nav-number">2.</span> <span class="nav-text">特殊思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#做题思想"><span class="nav-number">3.</span> <span class="nav-text">做题思想</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#解决后效性"><span class="nav-number">3.1.</span> <span class="nav-text">解决后效性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基础算法"><span class="nav-number">4.</span> <span class="nav-text">基础算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#高精度"><span class="nav-number">4.1.</span> <span class="nav-text">高精度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#枚举算法"><span class="nav-number">4.2.</span> <span class="nav-text">枚举算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递推"><span class="nav-number">4.3.</span> <span class="nav-text">递推</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一般性递推"><span class="nav-number">4.3.1.</span> <span class="nav-text">一般性递推</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组合计数"><span class="nav-number">4.3.2.</span> <span class="nav-text">组合计数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部分博弈问题"><span class="nav-number">4.3.3.</span> <span class="nav-text">部分博弈问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dp"><span class="nav-number">4.3.4.</span> <span class="nav-text">dp</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递归"><span class="nav-number">4.4.</span> <span class="nav-text">递归</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分治"><span class="nav-number">5.</span> <span class="nav-text">分治</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#CDQ"><span class="nav-number">5.1.</span> <span class="nav-text">CDQ</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最优解类分治"><span class="nav-number">5.2.</span> <span class="nav-text">最优解类分治</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#点分治"><span class="nav-number">5.3.</span> <span class="nav-text">点分治</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#边分治"><span class="nav-number">5.4.</span> <span class="nav-text">边分治</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#点分树"><span class="nav-number">5.5.</span> <span class="nav-text">点分树</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#贪心"><span class="nav-number">6.</span> <span class="nav-text">贪心</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#区间最大覆盖个数"><span class="nav-number">6.1.</span> <span class="nav-text">区间最大覆盖个数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区间选点"><span class="nav-number">6.2.</span> <span class="nav-text">区间选点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区间覆盖"><span class="nav-number">6.3.</span> <span class="nav-text">区间覆盖</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#搜索"><span class="nav-number">7.</span> <span class="nav-text">搜索</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#剪枝"><span class="nav-number">7.1.</span> <span class="nav-text">剪枝</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#舞蹈链"><span class="nav-number">7.2.</span> <span class="nav-text">舞蹈链</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#"><span class="nav-number">8.</span> <span class="nav-text">!!!!!!!!!!!!</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#杂项"><span class="nav-number">9.</span> <span class="nav-text">杂项</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#莫队"><span class="nav-number">9.1.</span> <span class="nav-text">莫队</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三分"><span class="nav-number">9.2.</span> <span class="nav-text">三分</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#dp-1"><span class="nav-number">10.</span> <span class="nav-text">dp</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#坐标类"><span class="nav-number">10.1.</span> <span class="nav-text">坐标类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性"><span class="nav-number">10.2.</span> <span class="nav-text">线性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#LIS"><span class="nav-number">10.2.1.</span> <span class="nav-text">LIS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LCS"><span class="nav-number">10.2.2.</span> <span class="nav-text">LCS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#区间"><span class="nav-number">10.2.3.</span> <span class="nav-text">区间</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#背包"><span class="nav-number">10.3.</span> <span class="nav-text">背包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#01"><span class="nav-number">10.3.1.</span> <span class="nav-text">01</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#完全"><span class="nav-number">10.3.2.</span> <span class="nav-text">完全</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多重"><span class="nav-number">10.3.3.</span> <span class="nav-text">多重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#混合"><span class="nav-number">10.3.4.</span> <span class="nav-text">混合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二维费用"><span class="nav-number">10.3.5.</span> <span class="nav-text">二维费用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分组背包"><span class="nav-number">10.3.6.</span> <span class="nav-text">分组背包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#依赖背包"><span class="nav-number">10.3.7.</span> <span class="nav-text">依赖背包</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最大子序列-子矩阵及类似问题"><span class="nav-number">10.4.</span> <span class="nav-text">最大子序列/子矩阵及类似问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一维"><span class="nav-number">10.4.1.</span> <span class="nav-text">一维</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二维"><span class="nav-number">10.4.2.</span> <span class="nav-text">二维</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#树型"><span class="nav-number">10.5.</span> <span class="nav-text">树型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#二叉树"><span class="nav-number">10.5.1.</span> <span class="nav-text">二叉树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#子树影响"><span class="nav-number">10.5.2.</span> <span class="nav-text">子树影响</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多次"><span class="nav-number">10.6.</span> <span class="nav-text">多次</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#状压"><span class="nav-number">10.7.</span> <span class="nav-text">状压</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单调队列"><span class="nav-number">10.8.</span> <span class="nav-text">单调队列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#斜率优化"><span class="nav-number">10.9.</span> <span class="nav-text">斜率优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#斜率单调-amp-决策点单调"><span class="nav-number">10.9.1.</span> <span class="nav-text">斜率单调&amp;决策点单调</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#斜率不单调-决策点不单调"><span class="nav-number">10.9.2.</span> <span class="nav-text">斜率不单调|决策点不单调</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#决策单调性"><span class="nav-number">10.10.</span> <span class="nav-text">决策单调性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#四边形不等式"><span class="nav-number">10.10.1.</span> <span class="nav-text">四边形不等式</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
